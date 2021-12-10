@@ -1,0 +1,56 @@
+@import "global";
+
+.logo {
+    width: 200px;
+    height: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    border-top: 30px;
+    width: 100%;
+    background-color: rgb(209, 226, 181), 
+}
+.presentacion {
+    padding-top: 100px;
+}
+
+//nesting
+nav{
+    @include caja-flex
+    (space-between, center, nowrap);
+}
+    ul{
+        display: flex;
+        padding: 0;
+        
+
+        a{
+            padding: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+    }
+
+.servicios{
+    div{
+        text-align: center;
+        padding-top: 300px;
+    }
+    .tipo-servicios{
+        @include caja-flex
+        (center, center, nowrap);
+        
+    }
+}
+footer {
+    min-height: 80px;
+    background-color: grey;
+    margin-top: 0;
+    .footer-content{
+        text-align: center;
+        padding-top: 30px;
+        color: white;
+    }
+}
